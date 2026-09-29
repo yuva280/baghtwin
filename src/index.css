@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0B0E11;
+    color: #E6EAF0;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom industrial scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0E11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2630;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #303A46;
+}
+
+/* Industrial utility classes */
+.panel-scada {
+  background-color: #14181D;
+  border: 1px solid #1F2630;
+}
+
+.panel-scada-inset {
+  background-color: #0F1318;
+  border: 1px solid #1F2630;
+}
+
+.panel-scada-highlight {
+  border-color: #303A46;
+}
+
+/* Subtle tech grid background */
+.bg-tech-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(31, 38, 48, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 38, 48, 0.25) 1px, transparent 1px);
+}
+
+/* Projector / High-Contrast Mode for Hackathon Stage Displays */
+html.projector-mode,
+body.projector-mode {
+  background-color: #030609 !important;
+  color: #FFFFFF !important;
+}
+
+.projector-mode .panel-scada {
+  background-color: #0A0F15 !important;
+  border-color: #2F3E4E !important;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.projector-mode .panel-scada-inset {
+  background-color: #05080C !important;
+  border-color: #253342 !important;
+}
+
+.projector-mode .text-text-secondary {
+  color: #C8D3E0 !important;
+}
+
+.projector-mode .text-text-muted {
+  color: #9AA8BA !important;
+}
+
